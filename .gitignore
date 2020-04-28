@@ -1,0 +1,8 @@
+/build/
+/test/
+/dist/
+/lib/
+/meteor-files/
+/nbproject/
+/opennlp-tools-1.5.0/
+/WordNet-JWI/

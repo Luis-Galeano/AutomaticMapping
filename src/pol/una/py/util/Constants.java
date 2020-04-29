@@ -7,7 +7,6 @@ package pol.una.py.util;
 public class Constants {
   
     public static final String SEMILAR_DATA = "/home/kpdevila/Documentos/semilarData/";
-    public static final String SEMILAR_HOME = "/home/kpdevila/Documentos/";
     public static final String DATA_DIR = "/home/kpdevila/Documentos/AutomaticMapping/data/";
     public static final String ITRUST_DIR = DATA_DIR +"iTrust.txt";
     public static final String HIPAA_DIR = DATA_DIR +"hippa.txt";

@@ -205,29 +205,29 @@ public class Calculo {
                     } 
                 }
                 
-                for(int i=0;i<x;i++){
-                    System.out.print("\\textbf{R-"+(i+1)+"} & ");
-                    for(int j=0;j<y;j++){
-                        if((boolean)aux[i][j].get("enlace")){
-                            if(j==y-1){
-                               System.out.print("\\cellcolor{green} "+String.format("%.5f", (float)aux[i][j].get("valor"))+" ");
-                           }
-                           else{
-                               System.out.print("\\cellcolor{green} "+String.format("%.5f", (float)aux[i][j].get("valor"))+" & ");
-                           }
-                        }
-                        else{
-                            if(j==y-1){
-                               System.out.print(String.format("%.5f", (float)aux[i][j].get("valor"))+" ");
-                           }
-                           else{
-                               System.out.print(String.format("%.5f", (float)aux[i][j].get("valor"))+" & ");
-                           }
-                        }
-                    }
-                    System.out.print("\\\\ \\hline");
-                    System.out.println("");
-                }
+//                for(int i=0;i<x;i++){
+//                    System.out.print("\\textbf{R-"+(i+1)+"} & ");
+//                    for(int j=0;j<y;j++){
+//                        if((boolean)aux[i][j].get("enlace")){
+//                            if(j==y-1){
+//                               System.out.print("\\cellcolor{green} "+String.format("%.5f", (float)aux[i][j].get("valor"))+" ");
+//                           }
+//                           else{
+//                               System.out.print("\\cellcolor{green} "+String.format("%.5f", (float)aux[i][j].get("valor"))+" & ");
+//                           }
+//                        }
+//                        else{
+//                            if(j==y-1){
+//                               System.out.print(String.format("%.5f", (float)aux[i][j].get("valor"))+" ");
+//                           }
+//                           else{
+//                               System.out.print(String.format("%.5f", (float)aux[i][j].get("valor"))+" & ");
+//                           }
+//                        }
+//                    }
+//                    System.out.print("\\\\ \\hline");
+//                    System.out.println("");
+//                }
                 
                 System.out.println(cota+";"+tp+";"+tn+";"+fp+";"+fn);
                 Double beneficio = tp.doubleValue()/(tp.doubleValue()+fn.doubleValue());

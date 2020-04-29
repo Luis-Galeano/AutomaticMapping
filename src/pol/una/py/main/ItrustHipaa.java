@@ -20,7 +20,7 @@ public class ItrustHipaa {
     
     public static void main(String[] args) {
         try {
-            ConfigManager.setSemilarDataRootFolder(Constants.DATA_DIR);
+            ConfigManager.setSemilarDataRootFolder(Constants.SEMILAR_DATA);
             Comparer comparer = new Comparer();
 
             Sentence text1;
@@ -50,7 +50,7 @@ public class ItrustHipaa {
             String[] itrust = iTrustString.split("\\.");
 
                         
-            SentencePreprocessor preprocessor = new SentencePreprocessor(SentencePreprocessor.TokenizerType.OPENNLP, SentencePreprocessor.TaggerType.OPENNLP_ENTROPY, SentencePreprocessor.StemmerType.WORDNET, SentencePreprocessor.ParserType.NONE);
+            SentencePreprocessor preprocessor = new SentencePreprocessor(SentencePreprocessor.TokenizerType.STANFORD, SentencePreprocessor.TaggerType.OPENNLP_PERCEPTRON, SentencePreprocessor.StemmerType.STANFORD, SentencePreprocessor.ParserType.NONE);
                 
             float [][] matriz = new float [itrust.length][hipaa.length];
                 for(int i=0;i<itrust.length;i++){
@@ -82,7 +82,7 @@ public class ItrustHipaa {
 //            for (float j=0;j<=12f;j=j+1f){
 //                Calculo.cacluclarPrecisionN(matriz,Util.HIPAA_ITRUST_VALUES,j);
 //            }
-              Calculo.cacluclarPrecisionN(matriz,Util.HIPAA_ITRUST_VALUES,5);
+              Calculo.cacluclarPrecisionN(matriz,Util.HIPAA_ITRUST_VALUES,4);
 
             System.out.println("----------------------------------");
             

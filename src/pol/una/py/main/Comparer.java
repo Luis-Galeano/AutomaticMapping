@@ -39,17 +39,17 @@ public class Comparer {
         
         boolean wnFirstSenseOnly = true;
        //WNWordMetric wnMetricLin = new WNWordMetric(WordNetSimilarity.WNSimMeasure.LESK_TANIM, wnFirstSenseOnly);
-        WNWordMetric wnMetricLeskTanim = new WNWordMetric(WordNetSimilarity.WNSimMeasure.LCH, wnFirstSenseOnly);
-        //LSAWordMetric lsaMetricTasa = new LSAWordMetric("LSA-MODEL-TASA-LEMMATIZED-DIM300");
+       //WNWordMetric wnMetricLeskTanim = new WNWordMetric(WordNetSimilarity.WNSimMeasure.LCH, wnFirstSenseOnly);
+        LSAWordMetric lsaMetricTasa = new LSAWordMetric("LSA-MODEL-TASA-LEMMATIZED-DIM300");
         //LDAWordMetric ldaMetricTasa = new LDAWordMetric("LDA-MODEL-TASA-LEMMATIZED-TOPIC300");
 
         //greedyComparerWNLin = new GreedyComparer(wnMetricLin, 0.2f, false);
         //greedyComparerWNLeskTanim = new GreedyComparer(wnMetricLeskTanim, 0.3f, false);
-        //greedyComparerLSATasa = new GreedyComparer(lsaMetricTasa, 0.6f, false);
+        greedyComparerLSATasa = new GreedyComparer(lsaMetricTasa, 0.6f, false);
         //greedyComparerLDATasa = new GreedyComparer(ldaMetricTasa, 0.3f, false);
 
         //optimumComparerWNLin = new OptimumComparer(wnMetricLin, 0.0f, true, PairwiseComparer.WordWeightType.IDF, PairwiseComparer.NormalizeType.MIN);
-        optimumComparerWNLeskTanim = new OptimumComparer(wnMetricLeskTanim, 0.0f, true, PairwiseComparer.WordWeightType.IDF, PairwiseComparer.NormalizeType.MIN);
+        //optimumComparerWNLeskTanim = new OptimumComparer(wnMetricLeskTanim, 0.0f, true, PairwiseComparer.WordWeightType.IDF, PairwiseComparer.NormalizeType.MIN);
         //optimumComparerLSATasa = new OptimumComparer(lsaMetricTasa, 0.6f, false, PairwiseComparer.WordWeightType.NONE, PairwiseComparer.NormalizeType.AVERAGE);
         //optimumComparerLDATasa = new OptimumComparer(ldaMetricTasa, 0.3f, false, PairwiseComparer.WordWeightType.NONE, PairwiseComparer.NormalizeType.AVERAGE);
 
@@ -67,11 +67,11 @@ public class Comparer {
         
         //return greedyComparerWNLin.computeSimilarity(sentenceA, sentenceB);
         //return greedyComparerWNLeskTanim.computeSimilarity(sentenceA, sentenceB);
-        //return greedyComparerLSATasa.computeSimilarity(sentenceA, sentenceB);
+        return greedyComparerLSATasa.computeSimilarity(sentenceA, sentenceB);
         //return greedyComparerLDATasa.computeSimilarity(sentenceA, sentenceB);
         
         //return optimumComparerWNLin.computeSimilarity(sentenceA, sentenceB);
-        return optimumComparerWNLeskTanim.computeSimilarity(sentenceA, sentenceB);
+        //return optimumComparerWNLeskTanim.computeSimilarity(sentenceA, sentenceB);
         //return optimumComparerLSATasa.computeSimilarity(sentenceA, sentenceB);
         //return optimumComparerLDATasa.computeSimilarity(sentenceA, sentenceB);
         
